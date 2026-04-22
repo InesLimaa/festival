@@ -1,0 +1,18 @@
+{% extends 'festival/layout.html' %}
+
+{% block title %}Dias{% endblock %}
+
+{% block content %}
+<h2>Lista de Dias</h2>
+
+{% if dias %}
+    <ul>
+        {% for dia in dias %}
+            <li>{{ dia.data }}</li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>Não existem dias registados.</p>
+{% endif %}
+
+{% endblock %}
